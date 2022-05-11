@@ -13,9 +13,26 @@
     <script>
       // connect to Moralis server
 
-      const serverUrl = "https://xxxxx/server";
-      const appId = "YOUR_APP_ID";
+      const serverUrl = "https://rgsf6ffatxnv.usemoralis.com:2053/server";
+      const appId = "5ZI4WrmyF0GEUmM8d3EPk1qqkCMJokRalKuod2K7";
       Moralis.start({ serverUrl, appId });
+
+      // metamask connect
+      async function login() {
+        let user = Moralis.User.current();
+        if (!user) {
+          user = await Moralis.authenticate();
+        }
+        console.log("logged in user:", user);
+      }
+
+      async function logOut() {
+        await Moralis.User.logOut();
+        console.log("logged out");
+      }
+
+      document.getElementById("btn-login").onclick = login;
+      document.getElementById("btn-logout").onclick = logOut;
 
     </script>
   </body>
