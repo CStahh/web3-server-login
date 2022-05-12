@@ -1,0 +1,418 @@
+/* Styles go here */
+/*@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Rubik:wght@300;400;700&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*!!!!INSERT/ADJUST - add css notes*/
+/*notes - */
+/*:root {
+    --clr-primary: #030303;
+    --clr-secondary: #1E1E1E;
+    --clr-text-light: #F2ECFF;
+    --clr-text-dark: #030303;
+    --clr-button-bg-1: #3586C6;
+    --clr-button-bg-2: #44E6FF;
+    --clr-button-bg-3: #FF7F50;
+}*/
+
+
+/*!!!!INSERT/ADJUST - add background colour*/
+/*notes - */
+:root {
+    --clr-primary: #11372d;
+    --clr-secondary: #009900;
+    --clr-primary: #170f3d;
+    --clr-secondary: #8718f0;
+    --clr-text-light: #fddc0d;
+    --clr-text-sub: #ffffff;
+    --clr-text-light: #0d89fe;
+    --clr-text-dark: #000000;
+    --clr-button-bg-1: #a3c2c2;
+    --clr-button-bg-2: #f2f2f2;
+    /*--clr-button-bg-3: #a3c2c2;*/
+    --clr-button-bg-3: #FF7F50;
+    --clr-text-nav: #fddc0d;
+    --clr-text-alt: #F545D6;
+    --clr-text-alt2: #C7BFF2;
+    --clr-text-alt3: #fddc0d;
+}
+
+html {
+    font-family: "Rubik" !important;
+    font-weight: 400;
+    max-width: 100vw;
+}
+
+body {
+    background: var(--clr-primary);
+    background: linear-gradient(var(--clr-primary), var(--clr-secondary));
+    color: var(--clr-text-light);
+
+    /*min-height: 100vh;*/
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    font-family: "Rubik";
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40vw;
+}
+
+nav {
+    height: 10vh;
+}
+
+main {
+    width: 100%;
+    max-width: 100vw;
+    margin-top: 8vh;
+    scroll-snap-type: y mandatory;
+
+    /* padding: 3em 1em; */
+}
+
+
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+    max-width: 100vw;
+    /*max-height: 90vh;*/
+}
+
+/*.navcolor {
+    color: var(--clr-text-nav);
+}*/
+
+.welcome {
+    min-height: 90vh;
+    max-width: 100vw;
+    scroll-snap-align: start;
+    padding: 2vh;
+    padding-bottom: 9vh;
+    padding-top: 3vh;
+}
+
+.about {
+    margin-top: 3vh;
+    padding-top: 5vh;
+    background: var(--clr-primary);
+    min-height: 100vh;
+    max-width: 100vw;
+
+    scroll-snap-align: start;
+}
+
+.divborder {
+    border: none;
+    border-radius: .5em;
+    border-radius: .6em;
+    border: 3px solid #ffffff;
+    }
+    
+
+/* TEXT STYLES */
+h1 {
+    font-family: "Gochi Hand";
+    font-weight: 700;
+    /*font-size: xx-large;*/
+    font-size: clamp(2.4rem, 8vw, 6rem);
+    /*transform: rotate(-4deg);*/
+    padding-left: .8em;
+    text-align: center;
+    color: var(--clr-text-light);
+}
+
+h2 {
+    font-family: "Gochi Hand";
+    font-weight: 700;
+    font-size: clamp(1.8rem, 6vw, 5rem);
+    padding-left: .8em;
+    margin-bottom: 3vh;
+    color: var(--clr-text-alt);
+    text-decoration: underline;
+}
+
+h3 {
+    /*margin: 1em auto 0;*/
+    font-family: "Gochi Hand";
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding-top: 1.5em;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    color: var(--clr-text-light);
+    }
+
+.sub-header {
+    font-family: "Gochi Hand";
+    font-weight: 700;
+    font-size: clamp(0.5rem, 3vw, 2rem);
+    /*transform: rotate(0deg) translateX(2.5em) translateY(-0.5em);*/
+    /*padding-left: .8em;*/
+    text-align: center;
+    color: wheat;
+    color: var(--clr-text-sub);
+}
+
+.countdown {
+    font-family: "Rubik";
+    font-weight: 700;
+    font-size: clamp(3rem, 5vw, 4rem);
+    display: none;
+
+}
+
+.text, ul {
+    font-size: clamp(1.2rem, 1.5vw, 1.25rem);
+    font-weight: 300;
+    padding: 0.1em;
+    text-align: left;
+
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+}
+
+.li {
+    margin-left: 5vw;
+}
+
+/* LINK / BUTTON STYLES */
+a {
+    display: block;
+    display: flex;/**/
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-text-sub);
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all 250ms ease;
+}
+
+a:hover {
+    color: var(--clr-button-bg-1);
+}
+
+.button {
+    display: inline-flex;
+    padding: .75em 1.5em;
+    margin: .5em auto;
+    justify-content: center;
+
+    background: linear-gradient(to left, var(--clr-button-bg-1), var(--clr-button-bg-2));
+    color: var(--clr-text-dark);
+
+    border: none;
+    border-radius: .5em;
+    border-radius: .6em;
+    border: 3px solid #0d89fe;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+
+    transition: all 500ms ease;
+}
+
+.nav-button {
+    margin: .5em 0;
+    float: right;
+   }
+
+.mint-button {
+    width: 225px;
+    height: 56px;
+    margin-bottom: 20px;
+
+    overflow: hidden;
+}
+
+.button:hover {
+    color: var(--clr-primary);
+    box-shadow: 0px 0px 5px var(--clr-button-bg-3),
+    0px 0px 15px var(--clr-button-bg-3),
+    0px 0px 30px var(--clr-button-bg-3),
+    0px 0px 100px var(--clr-button-bg-3);
+}
+
+.clearbox, .clearbox2 {
+  display: inline-block;
+  width: 54%;
+  padding: .75em .75em;
+  margin: .5em auto;
+
+  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.0);
+  border-radius: .6em;
+  border: 4px solid rgba(255, 255, 255, 1.0);
+  align-items: center;
+
+  text-decoration-color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+
+.clearbox:hover {
+    color: var(--clr-light);
+    /*box-shadow: 0px 0px 5px var(--clr-button-bg-3);*/
+    border-color: var(--clr-light);
+    /*0px 0px 15px var(--clr-button-bg-3),
+    0px 0px 30px var(--clr-button-bg-3),
+    0px 0px 100px var(--clr-button-bg-3);*/
+}
+
+.clearbox2:hover {
+    color: var(--clr-text-alt3);
+    border-color: var(--clr-text-alt3);
+}
+
+button.my-custom-crossmint-button {
+    display: flex;
+    padding: .75em 1.5em;
+    margin: .5em auto;
+
+    /*background-color: blueviolet;*/
+    background-color: var(--clr-button-alt);
+    background-color: #f545d6;
+    background-color: #030585;
+    /*min-width: 150px;
+    max-width: 225px;
+    margin-bottom: 20px;*/
+    width: 225px;
+    height: 56px;
+    overflow: hidden;
+
+    border: none;
+    border: 3px solid #0d89fe;
+    border-radius: .5em;
+
+    text-transform: uppercase;
+    color: #0d89fe;
+    color: var(--clr-light);
+    font-size: smaller;
+    font-weight: 700;
+
+    transition: all 500ms ease;
+
+    /*display: flex;
+    padding: .75em 1.5em;
+    margin: .5em auto;*/
+}
+
+.my-custom-crossmint-button:hover {
+    color: var(--clr-primary);
+    box-shadow: 0px 0px 5px var(--clr-button-bg-3),
+    0px 0px 15px var(--clr-button-bg-3),
+    0px 0px 30px var(--clr-button-bg-3),
+    0px 0px 100px var(--clr-button-bg-3);
+}
+
+.social {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 4vh;
+    justify-content: center;
+
+    font-weight: 300;
+    padding: 0.1em;
+    
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+}
+
+.project-row {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+
+/* IMAGE STYLES */
+.App-logo {
+    max-width: 30px;
+    height: auto;
+    padding-bottom: 6px;
+    margin: 10px;
+}
+
+.showcase {
+    width: 250px;
+    height: auto;
+}
+
+/* Social Media Icon */
+.circle {
+    border: 2px solid var(--clr-text-light);
+    border-radius: 50%;
+
+    width: 4em;
+    height: 4em;
+
+    margin: 0 .75em 2em;
+    position: relative;
+}
+
+.circle img {
+    width: 30px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#item-adjust {
+    padding-bottom: 14vh;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .showcase {
+        width: 310px;
+        max-width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .showcase {
+        width: 400px;
+        max-width: 100vw;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .header {
+        text-align: center;
+        max-width: 100vw;
+        margin-top: 10vh;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+        margin-top: 10vh;
+        max-width: 100vw;
+    }
+}
+
+.row {
+    max-width: 100vw;
+}
